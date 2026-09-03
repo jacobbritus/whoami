@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* * {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  } */
+  
+img {
+	max-width: 100%; 
+}
+
+.navigation {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 5rem;
+    border: black solid 1px;
+    
+    width: full;
+    li {
+        padding: 10px;
+
+    }
+}
+
+.root {
+    /* background: #000; */
+    padding-inline: 5%;
+}
+
+.first-section {
+
+    padding: 50px;
+    padding-left: 0px;
+
+    min-height: 50dvh;
+
+    h1 {
+        font-size: 7rem;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+    }
+    p {
+        max-width: 40rem;
+    }
+}
