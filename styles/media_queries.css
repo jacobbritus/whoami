@@ -1,0 +1,45 @@
+/* desktop */
+
+/* 2xl */
+@media (max-width: 1536px) {
+  
+}
+
+/* xl */
+@media (max-width: 1280px) {
+
+}
+
+/* lg */
+@media (max-width: 1024px) {
+  
+}
+
+/* md */
+@media (max-width: 768px) {
+      .first-section {
+        div h1 {
+            font-size: 5rem;
+        }
+    }
+}
+
+/* sm */
+@media (max-width: 640px) {
+       .first-section {
+        div h1 {
+            font-size: 3rem;
+        }
+    }
+}
+
+/* xs */
+@media (max-width: 475px) {
+       .first-section {
+        div h1 {
+            font-size: 3rem;
+        }
+    }
+}
+
+
