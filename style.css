@@ -6,6 +6,7 @@
   --primary-color: #ffffff;
   --paragraph: rgba(255, 255, 255, 0.709);
   --main-title: #ffffff;
+  --secondary-color: #0dff31;
 }
 
 *,
@@ -83,12 +84,23 @@ img {
   width: 100dvw;
   li {
     padding: 1rem;
+    flex: 1;
 
-
+    transition: all 2s;
  
     a {
       opacity: 70%;
       text-decoration: inherit;
+
+      &.selected {
+        color: var(--secondary-color);
+        font-size: medium;
+      }
+
+      &:hover {
+        color: var(--secondary-color);
+        font-size: medium;
+      }
       
  
     }
