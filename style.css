@@ -21,20 +21,15 @@ body {
   background-color: var(--color-900);
 
   min-height: 100dvh;
-
- 
 }
 
 main {
-     /* rekening houden met de navbar */
+  /* rekening houden met de navbar */
   padding-top: 4rem;
 
   padding-inline: 5%;
   height: 100dvh;
   min-height: 100dvh;
-
-
-
 }
 
 p,
@@ -44,7 +39,8 @@ li {
   font-size: 0.8rem;
 }
 
-h2, h1 {
+h2,
+h1 {
   font-weight: 400;
   margin-bottom: 1rem;
 }
@@ -68,12 +64,10 @@ img {
 
 .navigation {
   list-style-type: none;
-  margin: 0;   
+  margin: 0;
 
   position: fixed;
   top: 0%;
-
-
 
   display: flex;
   justify-content: space-between;
@@ -87,22 +81,21 @@ img {
     flex: 1;
 
     transition: all 2s;
- 
+
     a {
       opacity: 70%;
       text-decoration: inherit;
 
       &.selected {
         color: var(--secondary-color);
-        font-size: medium;
+        font-size: small;
+        cursor:default;
       }
 
       &:hover {
         color: var(--secondary-color);
-        font-size: medium;
+        font-size: small;
       }
-      
- 
     }
   }
 }
@@ -113,16 +106,12 @@ img {
   }
 
   padding-block: 4rem;
-
 }
-
-
 
 .first-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
 
   align-items: center;
 
