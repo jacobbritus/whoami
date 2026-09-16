@@ -96,9 +96,9 @@ searchInput.addEventListener("keydown", (e) => {
 function filterBlogPosts() {
   searchInput.blur()
     cardContainer.innerHTML = ""
-    const value = searchInput.value.trim()
+    const value = searchInput.value.trim().toLowerCase()
     const filteredPosts = value
-      ? blogPosts.filter(({ title }) => title.includes(value))
+      ? blogPosts.filter(({ title }) => title.toLowerCase().includes(value))
       : blogPosts;
     filteredPosts.forEach((p, i) => addBlogPost({ index: i, data: p }));
 

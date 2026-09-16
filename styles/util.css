@@ -26,7 +26,7 @@ button {
 }
 
 body {
-  font-family: "Source Code Pro", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Google Sans", Tahoma, Geneva, Verdana, sans-serif;
   color: white;
   background-color: var(--background-color);
 
@@ -62,7 +62,7 @@ h2 {
 
 h2,
 h1 {
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 1rem;
 }
 
