@@ -1,81 +1,46 @@
 :root {
-  --color-950: oklch(13% 0.028 261.692);
-  --color-900: oklch(20.5% 0 none);
-  --color-800: oklch(26.9% 0 none);
+  --background-color: oklch(18.134% 0.00696 258.416);
+  --border-color: oklch(26.9% 0 none);
   --color-700: oklch(37.1% 0 none);
-  --primary-color: #ffffff;
-  --paragraph: rgba(255, 255, 255, 0.709);
+  --paragraph: rgba(255, 255, 255, 0.794);
   --main-title: #ffffff;
-  --secondary-color: #0dff31;
+  --secondary-color: #41ff0d;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Source Code Pro", Tahoma, Geneva, Verdana, sans-serif;
-  color: white;
-  background-color: var(--color-900);
-
-  min-height: 100dvh;
-}
-
-main {
-  /* rekening houden met de navbar */
-  padding-top: 4rem;
-
-  padding-inline: 5%;
-  height: 100dvh;
-  min-height: 100dvh;
-}
-
-p,
-a,
-li {
-  color: var(--paragraph);
-  font-size: 0.8rem;
-}
-
-h2,
-h1 {
-  font-weight: 400;
-  margin-bottom: 1rem;
-}
-
-ul {
-  li {
-    margin-left: 2rem;
-    line-height: 2rem;
-  }
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  line-height: 1.5;
-}
-
-img {
-  max-width: 100%;
-}
-
-.navigation {
-  list-style-type: none;
-  margin: 0;
+.header {
+  display: flex;
 
   position: fixed;
   top: 0%;
+  border: var(--border-color) solid 1px;
+  background-color: var(--background-color);
+
+  width: 100dvw;
+}
+
+.theme-toggle {
+  width: 20%;
+
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-inline: 1rem;
+  /* border: 2px red solid; */
+  flex: 1;
+  /* &:hover {
+      background-color: var(--border-color);
+    } */
+}
+
+/* navigate links lijst */
+.navigation {
+  /* flex: 1; */
+  list-style-type: none;
+  margin: 0;
 
   display: flex;
   justify-content: space-between;
-  padding-inline: 5rem;
-  border: var(--color-800) solid 1px;
-  background-color: var(--color-900);
 
-  width: 100dvw;
   li {
     padding: 1rem;
     flex: 1;
@@ -89,7 +54,7 @@ img {
       &.selected {
         color: var(--secondary-color);
         font-size: small;
-        cursor:default;
+        cursor: default;
       }
 
       &:hover {
@@ -101,11 +66,17 @@ img {
 }
 
 .text-section {
-  h2 {
+  h1 {
     margin-bottom: 1rem;
+    color: var(--paragraph);
   }
 
-  padding-block: 4rem;
+  display: flex;
+  justify-content: center;
+
+  flex-direction: column;
+
+  height: 100dvh;
 }
 
 .first-section {

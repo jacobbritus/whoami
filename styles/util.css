@@ -1,0 +1,73 @@
+button {
+    appearance: none;
+    background-color: var(--background-color);
+    border: none;
+    padding: 0.75rem;
+    cursor: pointer;
+
+    border-radius: 2px;
+    display: flex;
+
+    &:hover {
+        background-color: var(--border-color);
+    }
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+
+  transition: color backgroundColor;
+  transition-duration: 100ms;
+}
+
+body {
+  font-family: "Source Code Pro", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  background-color: var(--background-color);
+
+  min-height: 100dvh;
+}
+
+main {
+  /* rekening houden met de navbar */
+  padding-top: 4rem;
+
+  padding-inline: 5%;
+  height: 100dvh;
+  min-height: 100dvh;
+}
+
+p,
+a,
+li {
+  color: var(--paragraph);
+  font-size: 0.8rem;
+}
+
+h2,
+h1 {
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+ul {
+  li {
+    margin-left: 2rem;
+    line-height: 2rem;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+
+
+svg {
+  color: var(--paragraph);
+}
