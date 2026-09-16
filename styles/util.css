@@ -5,6 +5,8 @@ button {
     padding: 0.75rem;
     cursor: pointer;
 
+    color: inherit;
+
     border-radius: 2px;
     display: flex;
 
@@ -20,7 +22,7 @@ button {
   box-sizing: border-box;
 
   transition: color backgroundColor;
-  transition-duration: 100ms;
+  /* transition-duration: 100ms; */
 }
 
 body {
@@ -42,14 +44,25 @@ main {
 
 p,
 a,
-li {
+li, input, i {
   color: var(--paragraph);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+}
+
+input {
+  appearance: none;
+    outline: none;
+    border: none;
+}
+
+
+h2 {
+  color: var(--paragraph);
 }
 
 h2,
 h1 {
-  font-weight: 400;
+  font-weight: 600;
   margin-bottom: 1rem;
 }
 

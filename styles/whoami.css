@@ -1,0 +1,114 @@
+.first-section {
+    height: 50%;
+}
+
+
+.text-section {
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.4rem;
+    color: var(--paragraph);
+
+  }
+
+  display: flex;
+  justify-content: center;
+
+  flex-direction: column;
+
+  padding-block: 3rem;
+
+
+  border-bottom: 1px solid var(--border-color);
+
+
+
+}
+
+.image-container {
+margin-bottom: 1rem; 
+
+
+
+    p {
+        opacity: 60%;
+        font-style: italic;
+    }
+}
+
+.school-img {
+    object-fit: contain;
+    max-width: 60%;
+
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    filter: brightness(90%);
+
+}
+
+.quote {
+    opacity: 70%;
+
+    text-align: end;
+    font-size: 3rem;
+
+    margin-block: 4rem;
+}
+
+
+.tech-stack-list {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0px;
+    padding: 0px;
+
+    margin-block: 1rem;
+
+
+    p {
+        border-radius: 4px;
+        padding: 10px;
+        display: flex;
+        appearance: none;
+        list-style: none;
+        background-color: var(--border-color);
+        border: 1px solid var(--color-700)
+    }
+}
+
+
+.quote-desc {
+    font-style: italic;
+}
+
+
+
+.work-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+.work-item {
+    
+
+
+    min-width: 20rem;
+    padding: 1rem;  
+    border: 1px solid var(--border-color);
+    .title {
+        font-weight: 600;
+    }
+
+    .company {
+        opacity: 75%;
+    }
+
+    .duration {
+        opacity: 70%;
+        margin-top: 0.7rem;
+    }
+}

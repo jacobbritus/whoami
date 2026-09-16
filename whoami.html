@@ -14,6 +14,7 @@
     />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="styles/util.css" />
+    <link rel="stylesheet" href="styles/whoami.css" />
   </head>
   <body class="root">
     <header class="header">
@@ -45,42 +46,104 @@
     </header>
 
     <main class="infinite-scroll">
-      <section class="text-section">
-        <h1>Bio</h1>
-        <p>
-          I'm a 21 year old Software Engineer student, who's dream is to become
-          a successful <b>Full Stack Developer</b> that builds cool websites.
-          <br /><br />
-          I'm currently in my second year of my bachelor's degree in ICT at The
-          Hague University of Applied sciences where I'll learn about Databases
-          and Webprogramming.<br /><br />
-          And in my free time, I follow course and tutorials and build projects
-          to learn more about programming and web development.
-        </p>
+      <section class="first-section">
+        <div>
+          <h1>Whoami?</h1>
+          <p>
+            I'm a 21 year old Software Engineer student, who's dream is to
+            become a successful <b>Full Stack Developer</b> that builds cool
+            websites.
+          </p>
+        </div>
       </section>
-      <section class="text-section">
-        <h1>Hobbies</h1>
-        <p>My hobbies include:</p>
-        <ul>
-          <li>Programming</li>
-          <li>Lifting Weights</li>
-          <li>Playing electric guitar</li>
-          <li>Reading</li>
-          <li>Cooking</li>
-        </ul>
-      </section>
-      <section class="text-section">
-        <h1>A Fun Fact About Me</h1>
-        <p>I really like cashew nuts.</p>
-      </section>
-      <section class="text-section">
-        <h1>My favorite quote</h1>
-        <q>The harder the struggle, the better the victory.</q>
+      <section class="text-section what-i-do">
+        <div>
+          <h1>What I Do</h1>
+          <p>
+            I'm currently in my second year of my bachelor's degree in ICT at
+            The Hague University of Applied sciences where I'll learn about
+            Databases and Webprogramming.<br /><br />
+          </p>
 
+          <div class="image-container">
+            <img
+              class="school-img"
+              src="https://www.dehaagsehogeschool.nl/sites/hhs/files/2025-05/OKC20220829MR024-low-res.png"
+              alt="A photo of the entrance of my college."
+            />
+            <p>A photo of the entrance of the entrance.</p>
+          </div>
+
+          <p>
+            And in my free time, I follow course and tutorials and build
+            projects to learn more about programming and web development.
+          </p>
+        </div>
+      </section>
+      <section class="text-section">
+        <h1>Technologies</h1>
         <p>
-          This quote motivates me to keep going when things get tough, because I
-          know that the end result will be worth it.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+          perferendis magnam excepturi ex laboriosam odio delectus illum nobis.
         </p>
+        <div class="tech-stack-list">
+          <p>React</p>
+          <p>JavaScript</p>
+          <p>HTML5</p>
+          <p>CSS3</p>
+          <p>Tailwind CSS</p>
+          <p>Python</p>
+          <p>Godot</p>
+          <p>Java</p>
+        </div>
+        <p>And more coming up!</p>
+      </section>
+
+      <section class="text-section">
+        <h1>Work Experience</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+          perferendis magnam excepturi ex laboriosam odio delectus illum nobis.
+        </p>
+        <div class="work-list">
+          <div class="work-item">
+            <p class="title">Sales & Marketing</p>
+            <p class="company">SOHO ART MADRID</p>
+            <p class="duration">2024</p>
+          </div>
+          <div class="work-item">
+            <p class="title">Manager</p>
+            <p class="company">Domino's Pizza</p>
+            <p class="duration">2021 - 2022</p>
+          </div>
+          <div class="work-item">
+            <p class="title">Sales Intern</p>
+            <p class="company">Cloud Marketing</p>
+            <p class="duration">2023</p>
+          </div>
+          <div class="work-item">
+            <p class="title">Host</p>
+            <p class="company">Basic-Fit</p>
+            <p class="duration">2026 - Now</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-section">
+        <h1>Favorite quote</h1>
+        <p class="quote-desc">
+          This quote motivates me to keep going when things get tough, because I
+          know that the end result will be worth it:
+        </p>
+        <i class="quote"
+          >The harder the struggle, <br />
+          the better the victory.</i
+        >
+
+        <p class="quote-desc">
+          Keep going!
+        </p>
+        
       </section>
     </main>
     <script src="scripts/index.js"></script>
