@@ -3,28 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Home</title>
+    <title>Contact</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="styles/media_queries.css" />
     <link rel="stylesheet" href="styles/util.css" />
+    <link rel="stylesheet" href="styles/contact.css" />
   </head>
-  <body class="root">
+  <body>
     <header class="header">
       <nav class="navigation-bar">
         <ul class="navigation">
-          <li><a class="selected" href="#">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="whoami.html">About</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a class="selected" href="#">Contact</a></li>
         </ul>
       </nav>
       <div class="navigation-list">
@@ -62,11 +61,11 @@
             </button>
           </div>
           <ul>
-            <li><a class="selected" href="#">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="whoami.html">About</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a class="selected" href="#">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -89,24 +88,103 @@
       </div>
     </header>
     <script src="scripts/themes.js"></script>
+
     <main>
-      <section class="first-section dvh">
-        <div>
-          <p>Hi, my name is</p>
-          <h1>Jacob Britus</h1>
+      <section class="first-section contact dvh">
+        <div class="hero">
+          <p>Let's have</p>
+          <h1>Contact</h1>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat ea
-            ipsam aperiam nihil ad atque labore illum natus! Nemo excepturi id
-            vero. Corrupti eum veritatis totam itaque eligendi nulla? Aut.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
           </p>
-          <button class="projects-button">
-            <a href="projects.html">Explore Projects</a>
-          </button>
         </div>
+        <div class="send-message">
+          <p>Message sent! Thank you for getting in touch. I will review your note and reply as soon as possible.</p>
+        </div>
+        <form class="form" novalidate>
+          <div class="name-container">
+            <!-- first name -->
+            <div class="form-group">
+              <label class="form-label" for="name"
+                >First Name <span class="required-asterisk">*</span></label
+              >
+              <input
+                required
+                minlength="3"
+                class="form-input text"
+                id="name"
+                placeholder="John"
+                type="text"
+              />
+              <p class="error-message">Please enter a name</p>
+            </div>
+
+            <!-- last name -->
+            <div class="form-group">
+              <label class="form-label" for="last_name"
+                >Last Name <span class="required-asterisk">*</span></label
+              >
+              <input
+                required
+                minlength="3"
+                class="form-input text"
+                id="last_name"
+                placeholder="Doe"
+                type="text"
+              />
+              <p class="error-message">Please enter a name</p>
+            </div>
+          </div>
+
+          <!-- email -->
+          <div class="form-group">
+            <label class="form-label" for="email"
+              >Email <span class="required-asterisk">*</span></label
+            >
+            <input
+              required
+              class="form-input text"
+              id="email"
+              pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+              placeholder="johndoe@gmail.com"
+              type="text"
+            />
+            <p class="error-message">Please enter a name</p>
+          </div>
+
+          <!-- message -->
+          <div class="form-group">
+            <label class="form-label" for="message">Message</label>
+            <textarea
+              class="form-input text"
+              id="message"
+              placeholder="Tell me about what you would like to know"
+              type="text"
+            ></textarea>
+          </div>
+          
+          <!-- consent -->
+          <div class="form-group">
+            <input
+              required="true"
+              type="checkbox"
+              class="form-input"
+              id="consent"
+            />
+
+            <label for="consent"
+              >I consent to being contacted by you.
+              <span class="required-asterisk">*</span></label
+            >
+            <p class="error-message">Please enter a name</p>
+          </div>
+          <button class="submit-button">Submit</button>
+        </form>
       </section>
     </main>
 
     <script src="scripts/index.js"></script>
     <script src="scripts/listNavigation.js"></script>
+    <script src="scripts/contact.js"></script>
   </body>
 </html>

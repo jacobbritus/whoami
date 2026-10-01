@@ -1,3 +1,7 @@
+.hero.first-section {
+  height: 15rem;
+}
+
 .blog-card-container {
   display: flex;
   flex-direction: column;
@@ -9,38 +13,36 @@
 
 .blog-card {
   padding: 1rem;
-  box-shadow: 2px;
   cursor: pointer;
+  position: relative;
 
   &:hover {
     background-color: var(--border-color);
+
+    .title {
+      text-decoration: underline;
+      padding-bottom: 0;
+    }
   }
 
   /* background-color: #007bff; */
   border: 1px solid var(--border-color);
 
-  &.hidden {
+
+
+  .blog-link {
+    position: absolute;
+    inset: 0;
+
+  }
+
+  .post-date {
+    color: var(--paragraph);
     opacity: 70%;
-    .text-container {
-      max-height: 0rem;
-      padding-top: 0.5rem;
-    }
   }
 
-  .text-container {
-    /* padding-block: 0.5rem; */
-    padding-top: 1.5rem;
+ 
 
-    max-height: 100rem;
-
-    transition: all;
-    transition-duration: 200ms;
-
-    @starting-style {
-      max-height: 0rem;
-    }
-    overflow: scroll;
-  }
 }
 
 .search-container {
@@ -59,9 +61,12 @@
   padding-left: 1rem;
 
   input {
-    &:focus {
+    color: var(--paragraph); 
+
+    outline: 0;
+    /* &:focus {
         opacity: 60%;
-    }
+    } */
     
     background-color: var(--background-color);
     flex: 1;
@@ -70,11 +75,48 @@
   }
 }
 
+.blog-search-input {
+  color: red;
+}
 
 .search-input-button {
   padding: 0.8rem;
-  background-color: var(--border-color);
+  cursor: pointer;
+  background-color: var(--secondary-color);
   &:hover {
-    background-color: var(--color-700);
+    background-color: var(--secondary-color);
+    filter: brightness(120%);
+  }
+}
+
+.loader-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  &.hidden {
+    display: none;
+  }
+}
+
+.loader {
+  border: 8px solid var(--background-color); /* Light grey */
+  border-top: 8px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+.error {
+  color: rgb(247, 101, 101) !important;
+  &.hidden {
+    display: none;
   }
 }

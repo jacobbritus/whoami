@@ -45,67 +45,97 @@ const cardContainer = document.querySelector(".blog-card-container");
 const searchInput = document.querySelector(".blog-search-input");
 const searchButton = document.querySelector(".search-input-button");
 
-function addBlogPost({ index, data }) {
-  const { id, title, date, content, visible } = data;
+const loaderContainer = document.querySelector(".loader-container");
+const error = document.querySelector(".error");
+
+let posts = [];
+
+function addBlogPost(data) {
+  const { title, published_at = "", content = "", visible } = data;
+
+  if (!title) return;
+
   const newDiv = document.createElement("div");
   newDiv.className = `blog-card ${!visible && "hidden"}`;
 
   const t = document.createElement("h2");
+  t.classList.add("title");
   t.textContent = title;
 
-  const d = document.createElement("p");
-  d.textContent = date;
+  // desc
+  const description = document.createElement("p");
+  description.textContent = data?.description;
+
+  // date
+  const date = document.createElement("time");
+  date.classList.add("post-date");
+  date.setAttribute("datetime", published_at);
+  const dateObj = new Date(published_at);
+  const cleanDate = dateObj.toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+  date.textContent = cleanDate;
 
   const p = document.createElement("p");
   p.textContent = content;
+
+  // link
+  const link = document.createElement("a");
+  link.setAttribute("href", data?.url);
+  link.setAttribute("target", "_blank");
+  link.classList.add("blog-link");
+  newDiv.appendChild(link);
 
   const pContainer = document.createElement("div");
   pContainer.className = "text-container";
   pContainer.appendChild(p);
 
   newDiv.appendChild(t);
-  newDiv.appendChild(d);
-  newDiv.appendChild(pContainer);
+  newDiv.appendChild(description);
+  newDiv.appendChild(date);
   cardContainer.appendChild(newDiv);
-
-  // toggles the visibility of the text content
-  newDiv.addEventListener("click", (e) => {
-    const visible = !blogPosts[index].visible;
-    blogPosts = blogPosts.with(index, { ...data, visible });
-
-    (visible);
-
-    newDiv.className = `blog-card ${!visible && "hidden"}`;
-  });
 }
 
-
-
-
-
-searchButton.addEventListener("click", filterBlogPosts)
+searchButton.addEventListener("click", filterBlogPosts);
 
 searchInput.addEventListener("keydown", (e) => {
-
   if (e.key === "Enter") {
-    filterBlogPosts()
+    filterBlogPosts();
   }
-  
 });
 
 function filterBlogPosts() {
-  searchInput.blur()
-    cardContainer.innerHTML = ""
-    const value = searchInput.value.trim().toLowerCase()
-    const filteredPosts = value
-      ? blogPosts.filter(({ title }) => title.toLowerCase().includes(value))
-      : blogPosts;
-    filteredPosts.forEach((p, i) => addBlogPost({ index: i, data: p }));
-
-  
+  searchInput.blur();
+  cardContainer.innerHTML = "";
+  const value = searchInput.value.trim().toLowerCase();
+  const filteredPosts = value
+    ? posts.filter(({ title }) => title.toLowerCase().includes(value))
+    : posts;
+  filteredPosts.forEach((p, i) => addBlogPost(p));
 }
 
+posts.forEach((p, i) => addBlogPost(p));
 
+async function fetchPosts() {
+  loaderContainer.classList.add("hidden");
+  try {
+    const res = await fetch("https://dev.to/api/articles");
 
+    if (!res.ok) {
+      throw new Error();
+    }
 
-blogPosts.forEach((p, i) => addBlogPost({ index: i, data: p }));
+    const data = await res.json();
+
+    posts = data.slice();
+
+    data.forEach((d) => addBlogPost(d));
+  } catch (err) {
+
+    error.classList.remove("hidden");
+  }
+}
+
+fetchPosts();

@@ -10,6 +10,8 @@ button {
     border-radius: 2px;
     display: flex;
 
+    transition: background-color 200ms ;
+
     &:hover {
         background-color: var(--border-color);
     }
@@ -26,7 +28,7 @@ button {
 }
 
 body {
-  font-family: "Google Sans", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Google Sans", sans-serif, Geneva, Verdana, sans-serif;
   color: white;
   background-color: var(--background-color);
 
@@ -44,14 +46,14 @@ main {
 
 p,
 a,
-li, input, i {
-  color: var(--paragraph);
-  font-size: 0.9rem;
+li, input, i, label, textarea {
+  color: var(--paragraph) !important;
+  font-size: 1rem;
 }
 
 input {
-  appearance: none;
-    outline: none;
+  /* appearance: none; */
+
     border: none;
 }
 
@@ -83,4 +85,9 @@ ul {
 
 svg {
   color: var(--paragraph);
+}
+
+textarea {
+  font-family: inherit;
+  resize: vertical;
 }

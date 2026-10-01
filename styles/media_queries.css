@@ -2,44 +2,84 @@
 
 /* 2xl */
 @media (max-width: 1536px) {
-  
+  .first-section.contact {
+      display: flex;
+      flex-direction: row;
+      gap: 5rem;
+
+      .form {
+        width: 70%;
+      }
+    }
 }
 
 /* xl */
 @media (max-width: 1280px) {
+  .first-section.contact {
+      display: flex;
+      flex-direction: row;
+      gap: 5rem;
 
+      .form {
+        width: 70%;
+      }
+    }
 }
 
 /* lg */
 @media (max-width: 1024px) {
-  
+    .first-section.contact {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      .form {
+        width: 95%;
+      }
+    }
 }
 
 /* md */
 @media (max-width: 768px) {
-      .first-section {
-        div h1 {
-            font-size: 5rem;
-        }
+  
+
+
+    .header {
+    .navigation-list {
+      display: none;
     }
+  }
+  
+  .first-section {
+    div h1 {
+      font-size: 5rem;
+    }
+  }
 }
 
 /* sm */
 @media (max-width: 640px) {
-       .first-section {
-        div h1 {
-            font-size: 3rem;
-        }
+    .header {
+    .navigation {
+      display: none;
     }
+
+    .navigation-list {
+        display: flex;
+    }
+  }
+  .first-section {
+    div h1 {
+      font-size: 3rem;
+    }
+  }
 }
 
 /* xs */
 @media (max-width: 475px) {
-       .first-section {
-        div h1 {
-            font-size: 3rem;
-        }
+  .first-section {
+    div h1 {
+      font-size: 3rem;
     }
+  }
 }
-
-
